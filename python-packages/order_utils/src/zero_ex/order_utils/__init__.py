@@ -14,53 +14,7 @@ contracts deployed on it.  For convenience, a docker container is provided for
 just this purpose.  To start it:
 `docker run -d -p 8545:8545 0xorg/ganache-cli:2.2.2`:code:.
 
-Constructing an order
----------------------
-
-Here is a short demonstration on how to create a 0x order.
-
->>> from zero_ex.contract_addresses import NETWORK_TO_ADDRESSES, NetworkId
->>> from zero_ex.order_utils import asset_data_utils, Order
->>> from datetime import datetime, timedelta
->>> import random
->>> my_address = "0x5409ed021d9299bf6814279a6a1411a7e866a631"
->>> example_order = Order(
-...     makerAddress=my_address,
-...     takerAddress="0x0000000000000000000000000000000000000000",
-...     exchangeAddress=NETWORK_TO_ADDRESSES[NetworkId.MAINNET].exchange,
-...     senderAddress="0x0000000000000000000000000000000000000000",
-...     feeRecipientAddress="0x0000000000000000000000000000000000000000",
-...     makerAssetData=asset_data_utils.encode_erc20(
-...        NETWORK_TO_ADDRESSES[NetworkId.MAINNET].ether_token
-...     ),
-...     takerAssetData=asset_data_utils.encode_erc20(
-...         NETWORK_TO_ADDRESSES[NetworkId.MAINNET].zrx_token
-...     ),
-...     salt=random.randint(1, 100000000000000000),
-...     makerFee=0,
-...     takerFee=0,
-...     makerAssetAmount=1 * 10 ** 18,  # Convert token amount to base unit with 18 decimals
-...     takerAssetAmount=500 * 10 ** 18,  # Convert token amount to base unit with 18 decimals
-...     expirationTimeSeconds=round(
-...         (datetime.utcnow() + timedelta(days=1)).timestamp()
-...     )
-... )
->>> import pprint
->>> pprint.pprint(example_order)
-{'exchangeAddress': '0x...',
- 'expirationTimeSeconds': ...,
- 'feeRecipientAddress': '0x0000000000000000000000000000000000000000',
- 'makerAddress': '0x...',
- 'makerAssetAmount': 1000000000000000000,
- 'makerAssetData': b...,
- 'makerFee': 0,
- 'salt': ...,
- 'senderAddress': '0x0000000000000000000000000000000000000000',
- 'takerAddress': '0x0000000000000000000000000000000000000000',
- 'takerAssetAmount': 500000000000000000000,
- 'takerAssetData': b...,
- 'takerFee': 0}
-"""  # noqa E501
+"""
 
 from copy import copy
 from enum import auto, Enum
