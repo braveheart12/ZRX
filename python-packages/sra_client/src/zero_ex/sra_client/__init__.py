@@ -105,7 +105,7 @@ Post Order
 
 Post an order for our Maker to trade ZRX for WETH:
 
->>> from zero_ex.contract_wrappers.exchange_types import Order
+>>> from zero_ex.contract_wrappers.exchange.types import Order
 >>> from zero_ex.order_utils import (
 ...     asset_data_utils,
 ...     order_to_jsdict,

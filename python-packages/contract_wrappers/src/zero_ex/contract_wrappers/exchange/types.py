@@ -9,7 +9,7 @@ The classes in this module simply provide human-readable names for those
 hash-named classes in the generated wrapper.
 """
 
-from .exchange import (
+from . import (
     Tuple0xbb41e5b3,
     Tuple0x260219a2,
     Tuple0x054ca44e,
