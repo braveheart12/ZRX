@@ -34,6 +34,11 @@
             for {{toPythonIdentifier this.name}}_element in {{toPythonIdentifier this.name}}
         ]
 {{/if}}
+        self.validator.assert_valid(
+            method_name='{{../name}}',
+            parameter_name='{{name}}',
+            argument_value={{toPythonIdentifier name}},
+        )
 {{/each}}
         func = self._get_contract_instance(
             self.contract_address
