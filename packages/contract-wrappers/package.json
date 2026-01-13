@@ -45,7 +45,7 @@
         "@0x/migrations": "^4.1.6",
         "@0x/subproviders": "^4.1.0",
         "@0x/tslint-config": "^3.0.1",
-        "@types/lodash": "4.14.104",
+        "@types/lodash": "4.17.20",
         "@types/mocha": "^2.2.42",
         "@types/nock": "^10.0.1",
         "@types/node": "*",

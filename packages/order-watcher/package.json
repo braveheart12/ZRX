@@ -44,7 +44,7 @@
         "@0x/subproviders": "^4.1.0",
         "@0x/tslint-config": "^3.0.1",
         "@types/bintrees": "^1.0.2",
-        "@types/lodash": "4.14.104",
+        "@types/lodash": "4.17.20",
         "@types/mocha": "^2.2.42",
         "@types/node": "*",
         "@types/sinon": "^2.2.2",

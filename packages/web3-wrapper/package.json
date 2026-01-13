@@ -38,7 +38,7 @@
     "homepage": "https://github.com/0xProject/0x-monorepo/packages/web3-wrapper/README.md",
     "devDependencies": {
         "@0x/tslint-config": "^3.0.1",
-        "@types/lodash": "4.14.104",
+        "@types/lodash": "4.17.20",
         "chai": "^4.0.1",
         "chai-as-promised": "^7.1.0",
         "chai-bignumber": "^3.0.0",
