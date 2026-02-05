@@ -53,7 +53,7 @@
         "react-markdown": "^3.2.2",
         "react-scroll": "0xproject/react-scroll#pr-330-and-replace-state",
         "react-tooltip": "^3.2.7",
-        "semver": "5.5.0",
+        "semver": "5.7.2",
         "styled-components": "^4.1.1"
     },
     "publishConfig": {
